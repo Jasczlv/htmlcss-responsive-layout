@@ -1,3 +1,7 @@
+:root {
+    --bg_blue: #B5DDFF;
+}
+
 /* RESET */
 
 * {
@@ -39,7 +43,11 @@ ol {
     background-color: rgb(32, 32, 46);
 }
 
-.bg-lightblue {
+.bg-cards {
+    background-color: var(--bg_blue);
+}
+
+.\lightblue {
     background-color: #B4D0E7;
 }
 
@@ -68,7 +76,12 @@ nav.bg-blue {
 }
 
 .column {
+    display: flex;
     flex-direction: column;
+}
+
+.col {
+    width: 100%;
 }
 
 .col-2 {
@@ -105,12 +118,11 @@ nav.bg-blue {
 }
 
 .container{
-    max-width: 60%;
     margin: 0 auto;
+    width: 100%;
 }
 
 .container-md{
-    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -118,92 +130,76 @@ nav.bg-blue {
     margin-bottom: 100px;
 }
 
-
 /* navbar */
 
 .logo {
     color: white;
-    height: 20px;
     width: fit-content;
+    font-size: 25px;
 }
 
-nav div.flex {
+nav div.row {
     justify-content: space-between;
     padding: 45px;
-    font-size: 30px;
 }
 
 .navbar-list {
     color: white;
 }
 
-.display-large {
-    display: none;
-}
-
-.card-sm {
+.cards-section {
     width: 100%;
-    text-align: left;
-    padding: 30px 40px 0;
-    background-color: #B5DDFF;
+}
+
+.container {
+    width: 100%;
+}
+
+div [class^='col-'] {
+    padding: 12px 12px;
+}
+
+/* cards section */
+
+.card {
     border-radius: 25px;
-    gap: 45px;
-    font-size: 20px;
-    line-height: 40px;
 }
 
-.card-sm h2 {
-    color: #0084FD;
-    font-size: 35px;
-    margin-top: 15px;
+.card-info {
+    padding: 24px;    
 }
 
-.card-sm a.button {
-    color: white;
-    background-color: #0084FD;
-    max-width: fit-content;
-    padding: 10px 50px;
-    font-size: 25px;
-    border-radius: 45px;
-}
-
-.card-sm .fa-apple {
-    margin-right: 10px;
-}
-
-.cards-section .container-lg {
-    padding: 25px;
-}
-
-.cards-section .container-lg div.card-sm {
-    margin-bottom: 35px;
-}
-
-.cards-section .container-lg .column:not(div:first-child) {
-    text-align: center;
-}
-
-.cards-section .container-lg .column:not(div:first-child) i.fa-solid{
-   font-size: 200px;
-   color: #0084FD;
-}
-
-.cards-section .container-lg .column:not(div:first-child) p{
-   margin-bottom: 50px;
+.card-img {
+    display: block;
+    align-self: flex-end;
 }
 
 
 /* MEDIA QUERY */
-
-
-@media screen and (max-width: 576px) {
-    .display-large {
+@media screen and (max-width:991px) {
+    nav.bg-blue ul{
         display: none;
     }
- }
+}
+
+@media screen and (min-width: 576px) {
+    .col-md-8 {
+        width: calc(8 * 100% / 12);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    nav.bg-blue i.fa-bars{
+        display: none;
+    }
+
+    .navbar-list li {
+        margin: 0 10px;
+        font-size: 20px;
+    }
 
 
- @media screen and (max-width: 992px) {
-
-
- }
+    .container {
+        max-width: 1200px;
+    }
+}
