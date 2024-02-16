@@ -201,30 +201,30 @@ div [class^='col-'] {
     }
 
     
-    .col-4 .card-info {
+    .col-md-4 .card-info {
         text-align: center;
         justify-content: center;
         flex-wrap: wrap;
         width: 100%;
     }
 
-    .col-4 .card-info * {
+    .col-md-4 .card-info * {
         width: 100%;
     }
 
-    .col-4 .card-info i {
+    .col-md-4 .card-info i {
         font-size: 60px;
         color: #0084FD;
     }
 
-    .col-4 .card-info span {
+    .col-md-4 .card-info span {
         font-size: 35px;
         line-height: 1.5em;
         color: #0084FD;
         margin-bottom: 10px;
     }
 
-    .col-4 .card-info p {
+    .col-md-4 .card-info p {
         font-size: 20px;
         line-height: 1.7em;
     }
