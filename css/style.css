@@ -1,5 +1,7 @@
 :root {
     --bg_blue: #B5DDFF;
+    --bg_purple: #9792e4;
+    --gutter: 50px;
 }
 
 /* RESET */
@@ -11,7 +13,7 @@
 }
 
 img {
-	max-width: 100%;
+    width: 100%;
 }
 
 a {
@@ -46,6 +48,7 @@ ol {
 .bg-cards {
     background-color: var(--bg_blue);
 }
+
 
 .\lightblue {
     background-color: #B4D0E7;
@@ -140,23 +143,24 @@ nav.bg-blue {
 
 nav div.row {
     justify-content: space-between;
-    padding: 26px;
+    padding: 24px 12px;
 }
 
-.navbar-list {
+.navbar-list , .fa-bars , .logo{
     color: white;
+}
+
+nav .row {
+    align-items: center;
 }
 
 .cards-section {
     width: 100%;
 }
 
-.container {
-    width: 100%;
-}
 
 div [class^='col-'] {
-    padding: 12px 12px;
+    padding: 12px;
 }
 
 .button {
@@ -187,7 +191,7 @@ div [class^='col-'] {
 
 .card-img {
     display: block;
-    max-width: 200px;
+    max-width: 250px;
 }
 
 .card-title {
@@ -229,6 +233,64 @@ div [class^='col-'] {
     line-height: 1.7em;
 }
 
+.bg-purple {
+    background-color: var(--bg_purple);
+}
+
+section.bg-purple {
+    padding: 15px;
+}
+
+/* planning */
+
+.planning-title {
+    font-size: 45px;
+    line-height: 3em;
+}
+
+.planning-p {
+    font-size: 18px;
+    line-height: 1.7em;
+}
+
+.strategic-planning {
+    color: white;
+    width: 100%;
+}
+
+.app-developement {
+    width: 100%;
+    margin-top: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.app-developement-head {
+    margin-bottom: 15px;
+}
+
+.app-developement-body span {
+    line-height: 2em;
+    font-size: 30px;
+}
+
+.app-developement-body p {
+    line-height: 1.5em;
+    margin-bottom: 35px;
+}
+
+.app-developement-body a i.fa-arrow-down {
+    font-size: 25px;
+    line-height: 0.7em;
+    background-color: var(--bg_purple);
+    padding: 20px;
+    border-radius: 100px;
+    margin-bottom: 15px;
+}
+
 /* MEDIA QUERY */
 @media screen and (max-width:991px) {
     nav.bg-blue ul{
@@ -257,9 +319,12 @@ div [class^='col-'] {
         font-size: 20px;
     }
 
-
     .container {
         max-width: 1100px;
+    }
+
+    .container-sm {
+        max-width: 900px;
     }
 
     .card-content {
@@ -274,4 +339,21 @@ div [class^='col-'] {
     .card-image {
         width: 50%;
     }
+
+    .strategic-planning {
+        max-width: calc( 100% / 2 - var(--gutter));
+    }
+    
+    .planning {
+            gap: var(--gutter);
+            justify-content: space-between;
+    }
+
+    .app-developement {
+        max-width: calc( 100% / 2 - var(--gutter));
+        max-height: 650px;
+        align-self: flex-end;
+    }
+
+    
 }
